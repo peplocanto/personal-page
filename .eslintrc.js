@@ -8,6 +8,7 @@ module.exports = {
       jsx: true,
     },
   },
+  plugins: ['simple-import-sort'],
   settings: {
     react: {
       version: 'detect',
@@ -24,7 +25,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
-    'prettier/@typescript-eslint',
+    'prettier',
     'plugin:prettier/recommended', // Make sure this is always the last element in the array.
   ],
   rules: {
@@ -32,7 +33,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'simple-import-sort/sort': 'error',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
     'jsx-a11y/anchor-is-valid': [
       'error',
       {

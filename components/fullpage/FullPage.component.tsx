@@ -1,7 +1,7 @@
-import React from "react";
-import ReactFullpage from "@fullpage/react-fullpage";
-import { fullpageOpts, pages } from "./FullPage.config";
-import { Pages } from "./FullPage.model";
+import React from 'react';
+import ReactFullpage from '@fullpage/react-fullpage';
+import { fullpageOpts, pages } from './FullPage.config';
+import { Pages } from './FullPage.model';
 
 export const FullPage: React.FC<{}> = () => {
   return (

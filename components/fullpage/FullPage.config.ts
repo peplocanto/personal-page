@@ -1,4 +1,4 @@
-import { Pages } from "./FullPage.model";
+import { Pages } from './FullPage.model';
 
 export const pages = Object.values(Pages) as Pages[];
 
@@ -12,5 +12,5 @@ export const fullpageOpts = {
   anchors: pages,
   navigation: true,
   showActiveTooltip: false,
-  navigationTooltips: ["Home", "About", "Portfolio", "Resume", "Contacs"],
+  navigationTooltips: ['Home', 'About', 'Portfolio', 'Resume', 'Contacs'],
 };

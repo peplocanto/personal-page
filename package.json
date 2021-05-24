@@ -5,17 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "export": "next export",
+    "prepare": "husky install",
+    "lint": "eslint --fix",
+    "format": "prettier --write"
   },
   "lint-staged": {
-    "*.{json,md,html,js,ts,tsx}": [
-      "eslint --fix . --ignore-path ./.gitignore",
-      "prettier --write . --ignore-path ./.gitignore"
+    "./**/*.{js,jsx,ts,tsx}": [
+      "lint"
     ]
   },
   "dependencies": {
@@ -43,11 +40,10 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
-    "prettier-plugin-organize-imports": "^2.1.0",
-    "typescript": "^4.2.4",
-    "undefined": " "
+    "typescript": "^4.2.4"
   }
 }

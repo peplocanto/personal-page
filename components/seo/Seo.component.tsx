@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import { SeoProps } from './Seo.model';
-export const Seo = (props: SeoProps) => {
-  const { title, desc, canonical, image } = props;
+import { SEO_CONFIG } from './Seo.config';
+export const Seo = () => {
+  const { title, desc, canonical } = SEO_CONFIG;
   return (
     <Head>
       <title>{title}</title>
@@ -19,15 +19,15 @@ export const Seo = (props: SeoProps) => {
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:site" content="@peplocanto" />
       <meta name="twitter:creator" content="@peplocanto" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9CC2CA" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png" />
+      <link rel="manifest" href="/fav/site.webmanifest" />
+      <link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#9CC2CA" />
       <meta name="msapplication-TileColor" content="#9CC2CA" />
       <meta name="theme-color" content="#ffffff" />
-      {image && <meta property="og:image" content={image} />}
-      {image && <meta name="twitter:image" content={image} />}
+      <meta property="og:image" content="https://imgur.com/3jiviWb.png" />
+      <meta name="twitter:image" content="https://imgur.com/MHqJKZw.png" />
       {canonical && <link rel="canonical" href={canonical} />}
     </Head>
   );
