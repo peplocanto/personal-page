@@ -35,7 +35,7 @@
 }
 
 .labelActive {
-  height: 150px;
+  height: 130px;
   opacity: 1;
   transition: height 1.5s ease-out, opacity 1s ease-out;
   & span {
@@ -82,7 +82,13 @@
   margin-top: 15px;
 }
 
-.plane svg {
-  width: 18px;
-  height: 18px;
+.plane {
+  &.labelActive {
+    height: 160px;
+  }
+  & svg {
+    width: 16px;
+    height: 16px;
+    margin-left: -3px;
+  }
 }

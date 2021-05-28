@@ -16,6 +16,11 @@ html {
 main {
   padding: 24px;
   color: $text;
+  background-color: $black;
+  &.light {
+    color: $black;
+    background-color: $text;
+  }
 }
 
 h2 {

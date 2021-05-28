@@ -9,7 +9,12 @@
   z-index: $highZIndex;
 }
 
-.iconContainer {
+.themeIcon {
+  margin-top: $padding;
+  @include smallIcon(false);
+}
+
+.langIcon {
   @include flexCenter;
   position: relative;
   height: $smallIconContainerSide;
