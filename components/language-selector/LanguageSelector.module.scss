@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'mixins';
+@import 'colors';
+
+.root {
+  position: absolute;
+  right: $padding;
+  top: $padding;
+  z-index: $highZIndex;
+}
+
+.iconContainer {
+  @include flexCenter;
+  position: relative;
+  height: $smallIconContainerSide;
+  width: $smallIconContainerSide;
+  border-radius: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.en,
+.es {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.es {
+  background-image: url('/icons/es.svg');
+  animation: pulseEs 1s ease-out;
+}
+
+.en {
+  background-image: url('/icons/en.svg');
+  animation: pulseEn 1s ease-out;
+}
+
+@keyframes pulseEn {
+  0% {
+    background-image: url('/icons/es.svg');
+    width: 100%;
+    height: 100%;
+  }
+  25% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    background-image: url('/icons/en.svg');
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes pulseEs {
+  0% {
+    background-image: url('/icons/en.svg');
+    width: 100%;
+    height: 100%;
+  }
+  25% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    background-image: url('/icons/es.svg');
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,24 +1,26 @@
 import { FullPage } from '@components/fullpage/FullPage.component';
+import { LanguageSelector } from '@components/language-selector/LanguageSelector.component';
+import { NavigationMenu } from '@components/navigation-menu/NavigationMenu.component';
 import { Seo } from '@components/seo/Seo.component';
-import { useTranslation } from 'next-i18next';
+import { Pages } from '@domain/Pages';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Home() {
   const router = useRouter();
-  const { t } = useTranslation('common');
+
+  const [activePage, setActivePage] = useState<Pages>(
+    router.asPath ? (router.asPath.replace('/#', '') as Pages) : Pages.HOME,
+  );
+
   return (
-    <div className="container">
+    <div id="main-container">
       <Seo />
       <main>
-        <nav>
-          <Link href="/" locale={router.locale === 'en' ? 'es' : 'en'}>
-            <button>{t('title')}</button>
-          </Link>
-        </nav>
-        <FullPage />
+        <LanguageSelector />
+        <NavigationMenu activePage={activePage} />
+        <FullPage setActivePage={setActivePage} />
       </main>
     </div>
   );

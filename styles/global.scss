@@ -1,11 +1,28 @@
-@import "~@fontsource/roboto-mono/700.css";
-@import "~@fontsource/arvo/400.css";
+@import '~@fontsource/roboto-mono/700.css';
+@import '~@fontsource/arvo/400.css';
+@import 'colors';
 
 body,
 html {
-  font-family: "Arvo";
+  font-family: 'Arvo';
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $black;
+}
+
+main {
+  padding: 24px;
+  color: $text;
 }
 
 h2 {
-  font-family: "Roboto Mono";
+  font-family: 'Roboto Mono';
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
