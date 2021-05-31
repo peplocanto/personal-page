@@ -34,9 +34,6 @@
   & span {
     line-height: $smallIconContainerSide;
     writing-mode: vertical-rl;
-    margin-top: 0px;
-    transition: margin-top 1s ease-in-out;
-    transition-delay: 0.2s;
   }
 }
 
@@ -47,20 +44,7 @@
   }
   opacity: 1;
   transition: height 1.5s ease-out, opacity 1s ease-out;
-  & span {
-    margin-top: 0px;
-    transition: margin-top 1s ease-in-out;
-    transition-delay: 0.2s;
-  }
-}
-
-@keyframes slidein {
-  0% {
-    margin-top: -150px;
-  }
-  100% {
-    margin-top: 0px;
-  }
+  border: 1px solid transparent;
 }
 
 .icon {
@@ -68,7 +52,7 @@
   &::after {
     content: '';
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     bottom: -50%;
     left: -50%;
     height: 200%;
@@ -97,6 +81,10 @@
   & svg {
     width: 16px;
     height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
     margin-left: -3px;
   }
 }

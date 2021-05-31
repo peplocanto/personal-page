@@ -3,7 +3,7 @@ import { Pages } from '@domain/Pages';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { useTranslation } from 'next-i18next';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from './NavigationMenu.module.scss';
 import { getItemIcon, getUserClass } from './NavigationMenu.utils';
 
@@ -33,7 +33,7 @@ const NavigationMenuItemLabel: React.FC<{ page: Pages; isActive: boolean }> = ({
   const { t } = useTranslation('common');
   return (
     <div
-      className={clsx(classes.label, classes[getUserClass(page)], isActive && classes.labelActive)}
+      className={clsx(isActive && classes.labelActive, classes.label, classes[getUserClass(page)])}
     >
       <span>{t(`pages.${page}`)}</span>
     </div>
@@ -47,7 +47,10 @@ const NavigationMenuItem: React.FC<{ page: Pages; activePage: Pages }> = ({
   page: Pages;
   activePage: Pages;
 }) => {
-  const isActive = page === activePage;
+  const [isActive, setIsActive] = useState<boolean>();
+  useEffect(() => {
+    setIsActive(page === activePage);
+  }, [activePage]);
 
   return (
     <a href={`#${page}`} className={classes.item}>
