@@ -1,7 +1,13 @@
+import { Pages } from '@domain/Pages';
+import { useTranslation } from 'next-i18next';
 import React from 'react';
-import { fullpageOpts, pages } from './Slide.config';
-import { Pages } from './Slide.model';
 
-export const FullPage: React.FC<{}> = () => {
-  return <></>;
+export const Slide: React.FC<{ page: Pages }> = ({ page }: { page: Pages }) => {
+  const { t } = useTranslation('common');
+
+  return (
+    <article>
+      <h3>{t(`pages.${page}`)}</h3>
+    </article>
+  );
 };

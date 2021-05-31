@@ -1,6 +1,8 @@
 @import '~@fontsource/roboto-mono/700.css';
 @import '~@fontsource/arvo/400.css';
 @import 'colors';
+@import 'variables';
+@import 'mixins';
 
 body,
 html {
@@ -11,6 +13,10 @@ html {
   justify-content: space-between;
   align-items: center;
   background-color: $black;
+  font-size: $baseFontSizeDesktopPx;
+  @include respond-below(sm) {
+    font-size: $baseFontSizeMobilePx;
+  }
 }
 
 main {

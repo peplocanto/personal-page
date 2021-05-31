@@ -1,3 +1,10 @@
 {
-  "title": "Hola"
+  "title": "Hi",
+  "pages": {
+    "home": "home",
+    "about": "about",
+    "works": "proyectos",
+    "resume": "currículum",
+    "contacts": "contactos"
+  }
 }

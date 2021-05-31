@@ -19,6 +19,11 @@
   color: inherit;
 }
 
+.item {
+  @include flexCenter;
+  flex-direction: column;
+}
+
 .label {
   text-align: center;
   overflow-y: hidden;
@@ -27,8 +32,8 @@
   opacity: 0;
   transition: height 1.5s ease-out, opacity 1s ease-out;
   & span {
+    line-height: $smallIconContainerSide;
     writing-mode: vertical-rl;
-    text-orientation: upright;
     margin-top: 0px;
     transition: margin-top 1s ease-in-out;
     transition-delay: 0.2s;
@@ -36,7 +41,10 @@
 }
 
 .labelActive {
-  height: 130px;
+  height: 152px;
+  @include respond-below(sm) {
+    height: 104px;
+  }
   opacity: 1;
   transition: height 1.5s ease-out, opacity 1s ease-out;
   & span {
@@ -79,14 +87,13 @@
   }
 }
 
-.user svg {
-  margin-top: 15px;
+.user {
+  & svg {
+    margin-top: 15px;
+  }
 }
 
 .plane {
-  &.labelActive {
-    height: 160px;
-  }
   & svg {
     width: 16px;
     height: 16px;

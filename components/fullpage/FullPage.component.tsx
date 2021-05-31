@@ -1,3 +1,4 @@
+import { Slide } from '@components/slide/Slide.component';
 import { PAGES } from '@domain/Constants';
 import { Pages } from '@domain/Pages';
 import ReactFullpage from '@fullpage/react-fullpage';
@@ -20,7 +21,7 @@ export const FullPage: React.FC<{ setActivePage }> = ({
           <ReactFullpage.Wrapper>
             {PAGES.map((page: Pages) => (
               <div key={page} className="section">
-                <h1>{page}</h1>
+                <Slide page={page} />
               </div>
             ))}
           </ReactFullpage.Wrapper>

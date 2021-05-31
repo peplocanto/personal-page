@@ -1,7 +1,34 @@
+@function remCalculator($value) {
+  @return #{$value / $baseFontSizeNum}rem;
+}
+
 // globals
 $padding: 24px;
 $margin: 12px;
 $highZIndex: 1000;
+$baseFontSizeNum: 14;
+$baseFontSizeDesktopPx: 22px;
+$baseFontSizeMobilePx: 16px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// typography
+$fontSizeSm: #{remCalculator($baseFontSizeNum * 0.8)};
+$fontSizeNormal: #{remCalculator($baseFontSizeNum)};
+$fontSizeMd: #{remCalculator($baseFontSizeNum * 1.5)};
+$fontSizeLg: #{remCalculator($baseFontSizeNum * 3)};
+
+$fontWeightVery-light: 100;
+$fontWeightLight: 200;
+$fontWeightNormal: 300;
+$fontWeightMedium: 400;
+$fontWeightBold: 500;
+$fontWeightVery-bold: 700;
 
 // icons
 $smallIconSide: 24px;

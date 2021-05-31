@@ -1,11 +1,11 @@
 import { MENU_ID, PAGES } from '@domain/Constants';
 import { Pages } from '@domain/Pages';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import clsx from 'clsx';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
 import classes from './NavigationMenu.module.scss';
 import { getItemIcon, getUserClass } from './NavigationMenu.utils';
-import clsx from 'clsx';
 
 const NavigationMenuItemIcon: React.FC<{ page: Pages; isActive: boolean }> = ({
   page,
@@ -14,7 +14,6 @@ const NavigationMenuItemIcon: React.FC<{ page: Pages; isActive: boolean }> = ({
   page: Pages;
   isActive: boolean;
 }) => {
-  console.log(isActive && isActive);
   return (
     <div
       className={clsx(isActive && classes.iconActive, classes.icon, classes[getUserClass(page)])}
