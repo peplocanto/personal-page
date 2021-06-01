@@ -22,14 +22,16 @@ export default function Home() {
   return (
     <div id="main-container">
       <Seo />
-      {isMount && (
-        <main className={theme}>
-          <Splash />
-          <GlobalSelector theme={theme} setTheme={setTheme} />
-          <NavigationMenu activePage={activePage} />
-          <FullPage setActivePage={setActivePage} />
-        </main>
-      )}
+      <main className={theme}>
+        <Splash theme={theme} />
+        {isMount && (
+          <>
+            <GlobalSelector theme={theme} setTheme={setTheme} />
+            <NavigationMenu activePage={activePage} />
+            <FullPage setActivePage={setActivePage} />
+          </>
+        )}
+      </main>
     </div>
   );
 }

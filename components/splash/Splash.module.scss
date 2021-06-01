@@ -8,10 +8,17 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: $black;
   opacity: 0;
   z-index: -$highestZIndex;
   animation: fade 2s;
+}
+
+.light {
+  background-color: $text;
+}
+
+.dark {
+  background-color: $black;
 }
 
 @keyframes fade {

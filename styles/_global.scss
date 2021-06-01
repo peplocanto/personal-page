@@ -8,6 +8,7 @@ body,
 html {
   font-family: 'Arvo';
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,6 +21,8 @@ html {
 }
 
 main {
+  height: 100%;
+  width: 100%;
   padding: 24px;
   color: $text;
   background-color: $black;

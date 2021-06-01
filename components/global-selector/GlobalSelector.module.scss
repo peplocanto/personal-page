@@ -37,12 +37,12 @@
 
 .es {
   background-image: url('/icons/es.svg');
-  animation: pulseEs 1s ease-out;
+  animation: pulseEs 0.8s ease-out;
 }
 
 .en {
   background-image: url('/icons/en.svg');
-  animation: pulseEn 1s ease-out;
+  animation: pulseEn 0.8s ease-out;
 }
 
 @keyframes pulseEn {
