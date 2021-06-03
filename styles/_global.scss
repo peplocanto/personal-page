@@ -1,5 +1,6 @@
 @import '~@fontsource/roboto-mono/700.css';
 @import '~@fontsource/arvo/400.css';
+@import '~@fontsource/arvo/700.css';
 @import 'colors';
 @import 'variables';
 @import 'mixins';
@@ -22,8 +23,6 @@ html {
 
 main {
   height: 100%;
-  width: 100%;
-  padding: 24px;
   color: $text;
   background-color: $black;
   &.light {

@@ -1,13 +1,14 @@
 import { Pages } from '@domain/Pages';
-import { useTranslation } from 'next-i18next';
 import React from 'react';
+import classes from './Slide.module.scss';
+import { Home } from './slides/Home.component';
 
 export const Slide: React.FC<{ page: Pages }> = ({ page }: { page: Pages }) => {
-  const { t } = useTranslation('common');
-
-  return (
-    <article>
-      <h3>{t(`pages.${page}`)}</h3>
-    </article>
-  );
+  const getSlide = (page: Pages) => {
+    switch (page) {
+      case Pages.HOME:
+        return <Home />;
+    }
+  };
+  return <article className={classes.root}>{getSlide(page)}</article>;
 };

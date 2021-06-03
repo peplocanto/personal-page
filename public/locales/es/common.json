@@ -1,5 +1,7 @@
 {
-  "title": "Hi",
+  "home": {
+    "hi": "Hola, soy Pep."
+  },
   "pages": {
     "home": "home",
     "about": "about",
