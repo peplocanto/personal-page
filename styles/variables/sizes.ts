@@ -8,7 +8,7 @@ export const SIZES = {
   typography: {
     fontSize: {
       baseDesktop: 22,
-      baseMobile: 16,
+      baseMobile: 18,
       sm: '0.8rem',
       normal: '1rem',
       md: '1.5rem',

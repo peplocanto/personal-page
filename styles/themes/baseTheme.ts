@@ -1,7 +1,8 @@
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
 import { COLORS } from '@styles/variables/colors';
 import { SIZES } from '@styles/variables/sizes';
-
+const breakpoints = createBreakpoints({});
 export const baseTheme: ThemeOptions = {
   overrides: {
     MuiCssBaseline: {
@@ -12,7 +13,7 @@ export const baseTheme: ThemeOptions = {
           height: '100%',
           minHeight: '100%',
           fontSize: SIZES.typography.fontSize.baseMobile,
-          [`@media (min-width:${SIZES.breakpoints.sm})`]: {
+          [breakpoints.up('sm')]: {
             fontSize: SIZES.typography.fontSize.baseDesktop,
           },
         },
@@ -20,6 +21,10 @@ export const baseTheme: ThemeOptions = {
           width: '100%',
           height: '100%',
           'overflow-x': 'hidden',
+          fontSize: SIZES.typography.fontSize.baseMobile,
+          [breakpoints.up('sm')]: {
+            fontSize: SIZES.typography.fontSize.baseDesktop,
+          },
         },
         a: {
           textDecoration: 'none',
@@ -32,6 +37,8 @@ export const baseTheme: ThemeOptions = {
     fontFamily: 'Arvo',
     fontWeightBold: SIZES.typography.fontWeight.bold,
     fontWeightRegular: SIZES.typography.fontWeight.normal,
+    h1: { fontSize: '2.8rem', lineHeight: '2.8rem' },
+    h4: { fontSize: '1.4rem', lineHeight: '2rem' },
     h6: {
       fontFamily: 'Roboto Mono',
       fontWeight: 'bold',
