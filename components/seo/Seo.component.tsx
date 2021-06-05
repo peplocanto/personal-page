@@ -1,3 +1,8 @@
+import '@fontsource/arvo/400.css';
+import '@fontsource/arvo/700.css';
+import '@fontsource/roboto-mono/700.css';
+import { SimplePaletteColorOptions } from '@material-ui/core/styles';
+import { baseTheme } from '@styles/themes/baseTheme';
 import Head from 'next/head';
 import { SEO_CONFIG } from './Seo.config';
 export const Seo = () => {
@@ -28,6 +33,10 @@ export const Seo = () => {
       <meta name="theme-color" content="#ffffff" />
       <meta property="og:image" content="https://imgur.com/3jiviWb.png" />
       <meta name="twitter:image" content="https://imgur.com/MHqJKZw.png" />
+      <meta
+        name="theme-color"
+        content={(baseTheme.palette.primary as SimplePaletteColorOptions).main}
+      />
       {canonical && <link rel="canonical" href={canonical} />}
     </Head>
   );

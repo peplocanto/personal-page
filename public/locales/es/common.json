@@ -1,5 +1,9 @@
 {
   "home": {
+    "title": "Pep Locanto",
+    "sub1": "Desarollador FrontEnd Senior",
+    "sub2": "Madrid, España, Planeta Tierra",
+    "bash": "pep@peplocanto:~$ ",
     "hi": "Hola, soy Pep."
   },
   "pages": {

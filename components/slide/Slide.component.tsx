@@ -1,9 +1,10 @@
 import { Pages } from '@domain/Pages';
 import React from 'react';
-import classes from './Slide.module.scss';
+import { useStyles } from './Slide.styles';
 import { Home } from './slides/Home.component';
 
 export const Slide: React.FC<{ page: Pages }> = ({ page }: { page: Pages }) => {
+  const classes = useStyles();
   const getSlide = (page: Pages) => {
     switch (page) {
       case Pages.HOME:

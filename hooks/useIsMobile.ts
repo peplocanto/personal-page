@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
+import { SIZES } from '../styles/variables/sizes';
 
 export const useIsMobile = () => {
   const [windowSize, setWindowSize] = useState(undefined);
-  const mobileBreakpoint = 576;
+  const mobileBreakpoint = SIZES.breakpoints.md;
 
   useEffect(() => {
     function handleResize() {

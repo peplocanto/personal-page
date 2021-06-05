@@ -1,13 +1,17 @@
-import useIsMounted from './useIsMounted';
-import { useEffect, useState } from 'react';
-import { Theme } from '@domain/Themes';
+import { makeSelectTheme } from '@store/theme/theme.selectors';
+import { actions } from '@store/theme/theme.store';
+import { Theme } from '@styles/themes/themes';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const useTheme = () => {
-  const isMounted = useIsMounted();
-  const [theme, setTheme] = useState<Theme>(undefined);
+  const dispatch = useDispatch();
+  const theme = useSelector(makeSelectTheme());
+  const setTheme = (t: Theme) => {
+    dispatch(actions.updateTheme(t));
+  };
 
   useEffect(() => {
-    if (!isMounted) return;
     if (!theme) {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         setTheme('dark');
@@ -21,7 +25,7 @@ export const useTheme = () => {
     return () => {
       setTheme(undefined);
     };
-  }, [isMounted]);
+  }, []);
 
   return { theme, setTheme };
 };

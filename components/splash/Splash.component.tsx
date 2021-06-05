@@ -1,8 +1,7 @@
-import { Theme } from '@domain/Themes';
-import clsx from 'clsx';
 import React from 'react';
-import classes from './Splash.module.scss';
+import { useStyles } from './Splash.styles';
 
-export const Splash: React.FC<{ theme: Theme }> = ({ theme }: { theme: Theme }) => {
-  return <div className={clsx(classes[theme], classes.root)}></div>;
+export const Splash: React.FC = () => {
+  const classes = useStyles();
+  return <div className={classes.root}></div>;
 };

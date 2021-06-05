@@ -1,19 +1,21 @@
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Theme } from '@styles/themes/themes';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-import classes from './GlobalSelector.module.scss';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import { Theme } from '@domain/Themes';
+import { useStyles } from './GlobalSelector.styles';
 
-export const GlobalSelector: React.FC<{ theme: Theme; setTheme: (theme: Theme) => void }> = ({
-  theme,
+export const GlobalSelector: React.FC<{ setTheme: (t: Theme) => void; theme: Theme }> = ({
   setTheme,
+  theme,
 }: {
+  setTheme: (t: Theme) => void;
   theme: Theme;
-  setTheme: (theme: Theme) => void;
 }) => {
   const router = useRouter();
+  const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <Link href="/" locale={router.locale === 'en' ? 'es' : 'en'}>
@@ -25,7 +27,7 @@ export const GlobalSelector: React.FC<{ theme: Theme; setTheme: (theme: Theme) =
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         className={classes.themeIcon}
       >
-        <FontAwesomeIcon icon={theme === 'dark' ? faMoon : faSun} />
+        <FontAwesomeIcon icon={theme === 'dark' ? faMoon : faSun} width="16" />
       </div>
     </div>
   );

@@ -1,5 +1,19 @@
 module.exports = {
-  root: true,
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    commonjs: true,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jsx-a11y/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
@@ -8,33 +22,13 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['simple-import-sort'],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
-  env: {
-    browser: true,
-    amd: true,
-    node: true,
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
-    'prettier',
-    'plugin:prettier/recommended', // Make sure this is always the last element in the array.
-  ],
+  plugins: ['react', 'jsx-a11y', '@typescript-eslint'],
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
+    'simple-import-sort/sort': 'error',
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -43,5 +37,10 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
 };

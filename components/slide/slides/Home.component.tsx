@@ -1,19 +1,25 @@
-import { useIsMobile } from '@hooks/useIsMobile';
-import { useTheme } from '@hooks/useTheme';
+import Typography from '@material-ui/core/Typography';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
-import classes from './Home.module.scss';
+import { useStyles } from './Home.styles';
 
 export const Home: React.FC = () => {
   const { t } = useTranslation('common');
-  const { theme } = useTheme();
-  const isMobile = useIsMobile();
-  console.log(theme);
+  const classes = useStyles();
   return (
     <div className={classes.root}>
+      {/* {!isMobile && (
+        <div className={classes.hiContainer}>
+          <Typography variant="h6">{t('home.bash')}</Typography>
+          <Typography variant="h6" className={classes.hi}>
+            {t('home.hi')}
+          </Typography>
+        </div>
+      )} */}
       <div className={classes.header}>
-        <h1>{t('home.title')}</h1>
-        {!isMobile && <h2 className={classes.hi}>{t('home.hi')}</h2>}
+        <Typography variant="h1">{t('home.title')}</Typography>
+        <Typography variant="h4">{t('home.sub1')}</Typography>
+        <Typography variant="h4">{t('home.sub2')}</Typography>
       </div>
     </div>
   );

@@ -1,10 +1,12 @@
 import { MENU_ID, PAGES } from '@domain/Constants';
 import { Pages } from '@domain/Pages';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { makeSelectActivePage } from '@store/ui/ui.selectors';
 import clsx from 'clsx';
 import { useTranslation } from 'next-i18next';
 import React, { useEffect, useState } from 'react';
-import classes from './NavigationMenu.module.scss';
+import { useSelector } from 'react-redux';
+import { useStyles } from './NavigationMenu.styles';
 import { getItemIcon, getUserClass } from './NavigationMenu.utils';
 
 const NavigationMenuItemIcon: React.FC<{ page: Pages; isActive: boolean }> = ({
@@ -14,11 +16,12 @@ const NavigationMenuItemIcon: React.FC<{ page: Pages; isActive: boolean }> = ({
   page: Pages;
   isActive: boolean;
 }) => {
+  const classes = useStyles();
   return (
     <div
       className={clsx(isActive && classes.iconActive, classes.icon, classes[getUserClass(page)])}
     >
-      <FontAwesomeIcon icon={getItemIcon(page)} />
+      <FontAwesomeIcon icon={getItemIcon(page)} width="16" />
     </div>
   );
 };
@@ -31,6 +34,7 @@ const NavigationMenuItemLabel: React.FC<{ page: Pages; isActive: boolean }> = ({
   isActive: boolean;
 }) => {
   const { t } = useTranslation('common');
+  const classes = useStyles();
   return (
     <div
       className={clsx(isActive && classes.labelActive, classes.label, classes[getUserClass(page)])}
@@ -47,6 +51,7 @@ const NavigationMenuItem: React.FC<{ page: Pages; activePage: Pages }> = ({
   page: Pages;
   activePage: Pages;
 }) => {
+  const classes = useStyles();
   const [isActive, setIsActive] = useState<boolean>();
   useEffect(() => {
     setIsActive(page === activePage);
@@ -60,11 +65,9 @@ const NavigationMenuItem: React.FC<{ page: Pages; activePage: Pages }> = ({
   );
 };
 
-export const NavigationMenu: React.FC<{ activePage: Pages }> = ({
-  activePage,
-}: {
-  activePage: Pages;
-}) => {
+export const NavigationMenu: React.FC = () => {
+  const classes = useStyles();
+  const activePage = useSelector(makeSelectActivePage());
   return (
     <div className={classes.root}>
       <ul id={MENU_ID} className={classes.menu}>
