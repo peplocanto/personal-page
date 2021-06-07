@@ -17,6 +17,7 @@ export const icon = (
   backgroundColor: containerColor,
   cursor: 'pointer',
   overflow: 'hidden',
+  transform: 'translateZ(0)',
   '& svg': {
     zIndex: 3,
     position: 'relative',
