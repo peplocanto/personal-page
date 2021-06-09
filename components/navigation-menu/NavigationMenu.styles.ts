@@ -6,8 +6,8 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     position: 'absolute',
     right: theme.spacing(3),
-    top: '50%',
-    transform: 'translateY(-45%)',
+    top: '55%',
+    transform: 'translateY(-50%)',
     zIndex: theme.zIndex.appBar,
   },
   menu: {
@@ -38,14 +38,19 @@ export const useStyles = makeStyles((theme) => ({
   labelActive: {
     height: 152,
     [theme.breakpoints.down('md')]: {
-      height: 96,
+      height: 120,
     },
     opacity: 1,
     transition: 'height 1.5s ease-out, opacity 1s ease-out',
     border: '1px solid transparent',
   },
   icon: {
-    ...smallIcon(true),
+    [theme.breakpoints.down('md')]: {
+      ...smallIcon(false),
+    },
+    [theme.breakpoints.up('md')]: {
+      ...smallIcon(true),
+    },
     '&::after': {
       content: '""',
       position: 'absolute',

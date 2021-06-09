@@ -16,7 +16,7 @@ export const FullPage: React.FC = () => {
   return (
     <ReactFullpage
       {...fullpageOpts}
-      afterLoad={(_, destination) => {
+      onLeave={(_, destination) => {
         setActivePage(destination.anchor as Pages);
       }}
       render={() => {

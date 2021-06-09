@@ -6,6 +6,17 @@
     "bash": "pep@peplocanto:~$ ",
     "hi": "Hola, soy Pep."
   },
+  "links": {
+    "medium": "Medium",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "github": "Github",
+    "devTo": "DevTo",
+    "codewars": "Codewars",
+    "linkedin": "Linkedin",
+    "resume": "Curriculum",
+    "studies": "Cursos"
+  },
   "pages": {
     "home": "home",
     "about": "about",

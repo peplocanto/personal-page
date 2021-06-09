@@ -69,12 +69,12 @@ export const NavigationMenu: React.FC = () => {
   const classes = useStyles();
   const activePage = useSelector(makeSelectActivePage());
   return (
-    <div className={classes.root}>
+    <aside className={classes.root}>
       <ul id={MENU_ID} className={classes.menu}>
         {PAGES.map((page: Pages) => (
           <NavigationMenuItem key={page} page={page} activePage={activePage} />
         ))}
       </ul>
-    </div>
+    </aside>
   );
 };

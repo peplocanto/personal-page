@@ -3,3 +3,4 @@ node_modules
 .github
 config-overrides.js
 *.md
+next-config.js

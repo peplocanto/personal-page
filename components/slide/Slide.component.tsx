@@ -1,3 +1,4 @@
+import { LinkMenu } from '@components/link-menu/LinkMenu.component';
 import { Pages } from '@domain/Pages';
 import React from 'react';
 import { useStyles } from './Slide.styles';
@@ -11,5 +12,10 @@ export const Slide: React.FC<{ page: Pages }> = ({ page }: { page: Pages }) => {
         return <Home />;
     }
   };
-  return <article className={classes.root}>{getSlide(page)}</article>;
+  return (
+    <article className={classes.root}>
+      {getSlide(page)}
+      <LinkMenu />
+    </article>
+  );
 };
