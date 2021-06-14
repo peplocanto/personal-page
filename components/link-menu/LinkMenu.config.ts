@@ -18,7 +18,7 @@ export const LINK_MENU_CONFIG: Record<Pages, LinkMenuItemProps[]> = {
     { icon: faInstagram, label: 'links.instagram', url: 'https://www.instagram.com/pep.locanto/' },
   ],
   [Pages.WORKS]: [
-    { icon: faGithub, label: 'links.github', url: 'https://github.com/peploc/peploc' },
+    { icon: faGithub, label: 'links.github', url: 'https://github.com/peplocanto/peplocanto' },
     { icon: faDev, label: 'links.devTo', url: 'https://dev.to/peplocanto' },
     { icon: faCode, label: 'links.codewars', url: 'https://www.codewars.com/users/peploc' },
   ],
