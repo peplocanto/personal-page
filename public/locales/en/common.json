@@ -6,6 +6,12 @@
     "bash": "pep@peplocanto:~$ ",
     "hi": "Hello, I'm Pep"
   },
+  "about": {
+    "title": "About me",
+    "content": "Italian, wine maker, frisbee player, <1>perfectonist</1>, <3>nerd</3>...<5/>I've studied medicine for my father,<7/>I'm learning to code for myself.<9/>I love to travel, make photos and cooking.<11/>I have <13>the best wife and the cutiest dog in the world.</13><14/><15>Multipotentialite</15>.",
+    "additionalContent1": "I read 50+ books and 500+ comics every year.<1/>I'm passionate about sci-fi and fantasy.<3/>The only things I keep tidy are my pc, my code and my drill-bits.<5/>Before I fall asleep I use to dive in physics, astrophysics and math.<7/>I love the sound of rain but I live in the only desert of Europe.<9/>My religion says I have to eat pizza once a week.",
+    "additionalContent2": "When I was a child (a lot of time ago...)<1/>my answer to the question:<3/>\"What do you want to do when you grow up?\"<5/>always was: <7/>\"I would like to solve math problems!\"<9/>I think that programming is the closest thing to my childhood dream.<11/>"
+  },
   "links": {
     "medium": "Medium",
     "twitter": "Twitter",

@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme) => ({
   menu: {
     display: 'flex',
     flexDirection: 'column',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       flexDirection: 'row',
     },
     justifyContent: 'center',
@@ -27,7 +27,7 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     opacity: 0,
     animationFillMode: 'forwards !important',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       animation: '$itemMobile 2s ease-out',
       '& + $item': {
         marginLeft: theme.spacing(2),
@@ -49,12 +49,12 @@ export const useStyles = makeStyles((theme) => ({
   label: {
     fontWeight: theme.typography.fontWeightBold,
     marginLeft: theme.spacing(2),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   icon: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       ...smallIcon(false),
     },
     [theme.breakpoints.up('md')]: {

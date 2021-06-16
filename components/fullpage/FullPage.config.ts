@@ -10,4 +10,5 @@ export const fullpageOpts = {
   navigation: false,
   showActiveTooltip: false,
   menu: MENU_ID,
+  recordHistory: false,
 };

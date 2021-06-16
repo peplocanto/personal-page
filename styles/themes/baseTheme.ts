@@ -38,10 +38,14 @@ export const baseTheme: ThemeOptions = {
     fontWeightBold: SIZES.typography.fontWeight.bold,
     fontWeightRegular: SIZES.typography.fontWeight.normal,
     h1: { fontSize: '2.8rem', lineHeight: '2.8rem' },
+    h3: { fontSize: '1.8rem', lineHeight: '2rem' },
     h4: { fontSize: '1.4rem', lineHeight: '2rem' },
     h6: {
       fontFamily: 'Roboto Mono',
       fontWeight: 'bold',
+    },
+    body1: {
+      fontSize: '0.9rem',
     },
   },
   palette: {

@@ -7,12 +7,12 @@ export const useStyles = makeStyles((theme) => ({
     '& > div:first-child': {
       [theme.breakpoints.down('md')]: {
         padding: `${theme.spacing(3)}px ${theme.spacing(11)}px ${theme.spacing(
-          15,
+          12,
         )}px ${theme.spacing(3)}px`,
       },
       [theme.breakpoints.up('md')]: {
         padding: `${theme.spacing(3)}px ${theme.spacing(11)}px ${theme.spacing(
-          20,
+          26,
         )}px ${theme.spacing(3)}px`,
       },
     },
