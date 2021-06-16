@@ -21,7 +21,9 @@
     "codewars": "Codewars",
     "linkedin": "Linkedin",
     "resume": "Resume",
-    "studies": "Courses"
+    "studies": "Courses",
+    "phone": "Call me",
+    "mail": "Mail me"
   },
   "pages": {
     "home": "home",
