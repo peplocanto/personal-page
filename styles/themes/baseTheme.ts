@@ -38,9 +38,10 @@ export const baseTheme: ThemeOptions = {
     fontWeightBold: SIZES.typography.fontWeight.bold,
     fontWeightRegular: SIZES.typography.fontWeight.normal,
     h1: {
-      fontSize: '2.8rem',
-      lineHeight: '2.8rem',
+      fontSize: '2.2rem',
+      lineHeight: '2.2rem',
       fontFamily: 'Playfair Display',
+      textTransform: 'uppercase',
     },
     h3: { fontSize: '1.8rem', lineHeight: '2rem', fontFamily: 'Arvo', fontWeight: 'bold' },
     h4: { fontSize: '1.4rem', lineHeight: '2rem', fontFamily: 'Arvo' },
