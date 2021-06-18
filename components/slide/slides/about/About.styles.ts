@@ -5,14 +5,16 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexFlow: 'column nowrap',
     alignItems: 'flex-start',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     height: '100%',
     width: '100%',
-    '& .MuiTypography-h3': {
-      marginBottom: theme.spacing(3),
-    },
   },
   content: {
+    display: 'flex',
+    flexFlow: 'column nowrap',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    height: '100%',
     '& .MuiTypography-root + .MuiTypography-root': {
       marginTop: theme.spacing(3),
     },

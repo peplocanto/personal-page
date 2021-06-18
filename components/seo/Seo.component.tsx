@@ -1,6 +1,8 @@
 import '@fontsource/arvo/400.css';
 import '@fontsource/arvo/700.css';
-import '@fontsource/roboto-mono/700.css';
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/700.css';
+import '@fontsource/playfair-display/700.css';
 import { SimplePaletteColorOptions } from '@material-ui/core/styles';
 import { baseTheme } from '@styles/themes/baseTheme';
 import Head from 'next/head';

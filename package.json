@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@fontsource/arvo": "^4.3.0",
+    "@fontsource/lato": "^4.4.5",
+    "@fontsource/playfair-display": "^4.4.5",
     "@fontsource/roboto-mono": "^4.3.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",

@@ -24,14 +24,13 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   label: {
-    fontWeight: theme.typography.fontWeightBold,
     textAlign: 'center',
     'overflow-y': 'hidden',
     marginTop: 12,
     height: 0,
     opacity: 0,
     transition: 'height 1.5s ease-out, opacity 1s ease-out',
-    '& span': {
+    '& .MuiTypography-subtitle1': {
       writingMode: 'vertical-rl',
     },
   },

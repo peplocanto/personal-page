@@ -1,6 +1,7 @@
 import { MENU_ID, PAGES } from '@domain/Constants';
 import { Pages } from '@domain/Pages';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Typography from '@material-ui/core/Typography';
 import { makeSelectActivePage } from '@store/ui/ui.selectors';
 import clsx from 'clsx';
 import { useTranslation } from 'next-i18next';
@@ -39,7 +40,7 @@ const NavigationMenuItemLabel: React.FC<{ page: Pages; isActive: boolean }> = ({
     <div
       className={clsx(isActive && classes.labelActive, classes.label, classes[getUserClass(page)])}
     >
-      <span>{t(`pages.${page}`)}</span>
+      <Typography variant="subtitle1">{t(`pages.${page}`)}</Typography>
     </div>
   );
 };

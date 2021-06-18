@@ -34,28 +34,28 @@ export const useStyles = makeStyles((theme) => ({
     bottom: 'auto',
     top: theme.spacing(3),
     height: '100%',
-    '& h1': {
+    '& .MuiTypography-h1': {
       textAlign: 'left',
       [theme.breakpoints.down('md')]: {
         marginLeft: '-5px',
         writingMode: 'vertical-rl',
       },
     },
-    '& h4': {
+    '& .MuiTypography-h4': {
       position: 'absolute',
       [theme.breakpoints.down('md')]: {
-        bottom: theme.spacing(5 * 2),
+        bottom: theme.spacing(10),
         top: 'auto',
       },
-      top: theme.spacing(8 * 2),
+      top: theme.spacing(12),
       zIndex: 10,
       width: '10rem',
-      '& + h4': {
+      '& + .MuiTypography-h4': {
         [theme.breakpoints.down('md')]: {
           bottom: theme.spacing(8.5),
           top: 'auto',
         },
-        top: theme.spacing(18),
+        top: theme.spacing(14),
         left: theme.spacing(1),
         color:
           theme.palette.type === 'dark' ? theme.palette.secondary.main : theme.palette.primary.main,

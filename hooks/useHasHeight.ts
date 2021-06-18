@@ -1,9 +1,13 @@
+import { useIsMobile } from '@hooks/useIsMobile';
 import { useEffect, useState } from 'react';
 import { SIZES } from '../styles/variables/sizes';
 
 export const useHasHeight = () => {
   const [windowSize, setWindowSize] = useState(undefined);
-  const heightBreakpoint = SIZES.breakpoints.md;
+  const isMobile = useIsMobile();
+  const heightBreakpoint = isMobile
+    ? SIZES.breakpoints.mobileHeight
+    : SIZES.breakpoints.desktopHeight;
 
   useEffect(() => {
     function handleResize() {

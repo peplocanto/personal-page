@@ -21,10 +21,12 @@ export const SIZES = {
   },
   breakpoints: {
     xs: 0,
-    sm: 576,
-    md: 768,
-    lg: 992,
+    sm: 575,
+    md: 767,
+    lg: 991,
     xl: 1200,
+    mobileHeight: 648,
+    desktopHeight: 824,
   },
   icons: {
     smallIconSide: 24,

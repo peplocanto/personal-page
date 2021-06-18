@@ -25,16 +25,9 @@ export const About: React.FC = () => {
             >
               b
             </a>
-            c<span style={{ fontFamily: 'monospace' }}>d</span>e
-            <br />
-            f
-            <br />
-            g
-            <br />
-            h
-            <br />h
+            c<span style={{ fontFamily: 'monospace' }}>d</span>e<br />f<br />g<br />h<br />i
             <a href="https://www.instagram.com/p/CQG0ynmsmTR/" target="_blank" rel="noreferrer">
-              i
+              j
             </a>
             <br />
             <a
@@ -42,26 +35,25 @@ export const About: React.FC = () => {
               target="_blank"
               rel="noreferrer"
             >
-              l
+              k
             </a>
-            m
+            l
           </Trans>
         </Typography>
+
         {!isMobile && (
-          <>
-            {hasHeight && (
-              <Typography component={'div'} variant="body1">
-                <Trans i18nKey="about.additionalContent1">
-                  a<br />b<br />c<br />d<br />e<br />f
-                </Trans>
-              </Typography>
-            )}
-            <Typography component={'div'} variant="body1">
-              <Trans i18nKey="about.additionalContent2">
-                a<br />b<br />c<br />d<br />e<br />f
-              </Trans>
-            </Typography>
-          </>
+          <Typography component={'div'} variant="body1">
+            <Trans i18nKey="about.additionalContent1">
+              a<br />b<br />c<br />d<br />e<br />f
+            </Trans>
+          </Typography>
+        )}
+        {hasHeight && (
+          <Typography component={'div'} variant="body1">
+            <Trans i18nKey="about.additionalContent2">
+              a<br />b<br />c<br />d<br />e<br />f
+            </Trans>
+          </Typography>
         )}
       </div>
     </div>

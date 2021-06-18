@@ -47,7 +47,6 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   label: {
-    fontWeight: theme.typography.fontWeightBold,
     marginLeft: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
       display: 'none',

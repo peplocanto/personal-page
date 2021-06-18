@@ -1,6 +1,7 @@
 import { MENU_ID } from '@domain/Constants';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Typography from '@material-ui/core/Typography';
 import { makeSelectActivePage } from '@store/ui/ui.selectors';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
@@ -27,7 +28,7 @@ const LinkMenuItemLabel: React.FC<{ label: string }> = ({ label }: { label: stri
   const classes = useStyles();
   return (
     <div className={classes.label}>
-      <span>{t(label)}</span>
+      <Typography variant="subtitle1">{t(label)}</Typography>
     </div>
   );
 };

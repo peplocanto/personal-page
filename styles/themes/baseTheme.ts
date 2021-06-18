@@ -34,15 +34,19 @@ export const baseTheme: ThemeOptions = {
     },
   },
   typography: {
-    fontFamily: 'Arvo',
+    fontFamily: 'Lato',
     fontWeightBold: SIZES.typography.fontWeight.bold,
     fontWeightRegular: SIZES.typography.fontWeight.normal,
-    h1: { fontSize: '2.8rem', lineHeight: '2.8rem' },
-    h3: { fontSize: '1.8rem', lineHeight: '2rem' },
-    h4: { fontSize: '1.4rem', lineHeight: '2rem' },
-    h6: {
-      fontFamily: 'Roboto Mono',
+    h1: {
+      fontSize: '2.8rem',
+      lineHeight: '2.8rem',
+      fontFamily: 'Playfair Display',
+    },
+    h3: { fontSize: '1.8rem', lineHeight: '2rem', fontFamily: 'Arvo', fontWeight: 'bold' },
+    h4: { fontSize: '1.4rem', lineHeight: '2rem', fontFamily: 'Arvo' },
+    subtitle1: {
       fontWeight: 'bold',
+      fontFamily: 'Arvo',
     },
     body1: {
       fontSize: '0.9rem',
