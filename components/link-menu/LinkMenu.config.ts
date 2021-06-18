@@ -7,7 +7,13 @@ import {
   faMediumM,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import { faCode, faEnvelope, faFileAlt, faPhoneAlt, faUniversity } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCode,
+  faEnvelope,
+  faFileAlt,
+  faPhoneAlt,
+  faUniversity,
+} from '@fortawesome/free-solid-svg-icons';
 import { LinkMenuItemProps } from './LinkMenu.model';
 
 export const LINK_MENU_CONFIG: Record<Pages, LinkMenuItemProps[]> = {
@@ -28,8 +34,7 @@ export const LINK_MENU_CONFIG: Record<Pages, LinkMenuItemProps[]> = {
     { icon: faUniversity, label: 'links.studies', url: 'https://trello.com/peplocantocourses' },
   ],
   [Pages.CONTACTS]: [
-    { icon: faLinkedinIn, label: 'links.linkedin', url: 'https://www.linkedin.com/in/peplocanto/' },
     { icon: faPhoneAlt, label: 'links.phone', url: 'tel:+34621040209' },
-    { icon: faEnvelope, label: 'links.mail', url: 'mailto:pep@peplocanto.com' }
+    { icon: faEnvelope, label: 'links.mail', url: 'mailto:pep@peplocanto.com' },
   ],
 };
