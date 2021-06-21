@@ -7,7 +7,8 @@ import { SimplePaletteColorOptions } from '@material-ui/core/styles';
 import { baseTheme } from '@styles/themes/baseTheme';
 import Head from 'next/head';
 import { SEO_CONFIG } from './Seo.config';
-export const Seo = () => {
+
+const Seo = () => {
   const { title, desc, canonical } = SEO_CONFIG;
   return (
     <Head>
@@ -43,3 +44,5 @@ export const Seo = () => {
     </Head>
   );
 };
+
+export default Seo;

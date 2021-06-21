@@ -48,7 +48,7 @@ const LinkMenuItem: React.FC<{ item: LinkMenuItemProps }> = ({
   );
 };
 
-export const LinkMenu: React.FC = () => {
+const LinkMenu: React.FC = () => {
   const classes = useStyles();
   const activePage = useSelector(makeSelectActivePage());
   return activePage && LINK_MENU_CONFIG[activePage].length ? (
@@ -61,3 +61,5 @@ export const LinkMenu: React.FC = () => {
     </aside>
   ) : null;
 };
+
+export default LinkMenu;

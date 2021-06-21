@@ -10,12 +10,12 @@ export const Home: React.FC = () => {
     <div className={classes.root}>
       <div className={classes.header}>
         <Typography variant="h1">{t('home.title')}</Typography>
-        <Typography variant="h4">
+        <Typography variant="h4" variantMapping={{ h4: 'h2' }}>
           <Trans i18nKey="home.sub1">
             a<br />b<br />c
           </Trans>
         </Typography>
-        <Typography variant="h4">
+        <Typography variant="h4" variantMapping={{ h4: 'h2' }}>
           <Trans i18nKey="home.sub2">
             a<br />b<br />c
           </Trans>

@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { useStyles } from './GlobalSelector.styles';
 
-export const GlobalSelector: React.FC<{ setTheme: (t: Theme) => void; theme: Theme }> = ({
+const GlobalSelector: React.FC<{ setTheme: (t: Theme) => void; theme: Theme }> = ({
   setTheme,
   theme,
 }: {
@@ -25,6 +25,10 @@ export const GlobalSelector: React.FC<{ setTheme: (t: Theme) => void; theme: The
       </Link>
       <div
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        onKeyPress={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        role="button"
+        aria-label="Toggle theme"
+        tabIndex={0}
         className={classes.themeIcon}
       >
         <FontAwesomeIcon icon={theme === 'dark' ? faMoon : faSun} width="16" />
@@ -32,3 +36,5 @@ export const GlobalSelector: React.FC<{ setTheme: (t: Theme) => void; theme: The
     </div>
   );
 };
+
+export default GlobalSelector;

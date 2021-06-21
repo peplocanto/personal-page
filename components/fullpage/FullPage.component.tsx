@@ -7,7 +7,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { fullpageOpts } from './FullPage.config';
 
-export const FullPage: React.FC = () => {
+const FullPage: React.FC = () => {
   const dispatch = useDispatch();
   const setActivePage = (page: Pages) => {
     dispatch(actions.setActivePage(page));
@@ -33,3 +33,5 @@ export const FullPage: React.FC = () => {
     />
   );
 };
+
+export default FullPage;

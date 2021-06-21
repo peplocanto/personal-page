@@ -1,7 +1,7 @@
 import { Pages } from '@domain/Pages';
 import {
-  faPaperPlane,
   faHome,
+  faPaperPlane,
   faUserAstronaut,
   faUserGraduate,
   faUserTie,

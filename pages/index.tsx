@@ -1,14 +1,19 @@
-import { FullPage } from '@components/fullpage/FullPage.component';
-import { GlobalSelector } from '@components/global-selector/GlobalSelector.component';
-import { NavigationMenu } from '@components/navigation-menu/NavigationMenu.component';
 import { Splash } from '@components/splash/Splash.component';
 import { useActivePage } from '@hooks/useActivePage';
 import { useTheme } from '@hooks/useTheme';
 import { Main } from 'layouts/Main.layout';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import dynamic from 'next/dynamic';
 import React, { useEffect } from 'react';
 
 const Home = () => {
+  const GlobalSelector = dynamic(
+    () => import('@components/global-selector/GlobalSelector.component'),
+  );
+  const NavigationMenu = dynamic(
+    () => import('@components/navigation-menu/NavigationMenu.component'),
+  );
+  const FullPage = dynamic(() => import('@components/fullpage/FullPage.component'));
   const { theme, setTheme } = useTheme();
   const { setActivePage } = useActivePage();
   useEffect(() => {

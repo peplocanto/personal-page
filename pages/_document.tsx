@@ -1,10 +1,10 @@
 import { ServerStyleSheets as MaterialUiServerStyleSheets } from '@material-ui/styles';
-import NextDocument from 'next/document';
+import NextDocument, { DocumentContext } from 'next/document';
 import React from 'react';
 
 export default class Document extends NextDocument {
-  static async getInitialProps(ctx): Promise<{
-    head: any[];
+  static async getInitialProps(ctx: DocumentContext): Promise<{
+    head: JSX.Element[];
     styles: JSX.Element[];
     html: string;
   }> {

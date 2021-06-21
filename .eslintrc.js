@@ -26,8 +26,10 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',
+    'react-hooks/exhaustive-deps': 'off',
     'react/prop-types': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'on',
+    '@typescript-eslint/explicit-function-return-type': "off",
+    '@typescript-eslint/explicit-module-boundary-types': "off",
     'jsx-a11y/anchor-is-valid': [
       'error',
       {

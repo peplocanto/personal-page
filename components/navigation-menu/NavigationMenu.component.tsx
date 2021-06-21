@@ -59,14 +59,16 @@ const NavigationMenuItem: React.FC<{ page: Pages; activePage: Pages }> = ({
   }, [activePage]);
 
   return (
-    <a href={`#${page}`} className={classes.item}>
-      <NavigationMenuItemIcon isActive={isActive} page={page} />
-      <NavigationMenuItemLabel isActive={isActive} page={page} />
-    </a>
+    <li>
+      <a href={`#${page}`} className={classes.item}>
+        <NavigationMenuItemIcon isActive={isActive} page={page} />
+        <NavigationMenuItemLabel isActive={isActive} page={page} />
+      </a>
+    </li>
   );
 };
 
-export const NavigationMenu: React.FC = () => {
+const NavigationMenu: React.FC = () => {
   const classes = useStyles();
   const activePage = useSelector(makeSelectActivePage());
   return (
@@ -79,3 +81,5 @@ export const NavigationMenu: React.FC = () => {
     </aside>
   );
 };
+
+export default NavigationMenu;
