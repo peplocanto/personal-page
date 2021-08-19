@@ -17,6 +17,10 @@ export const useStyles = makeStyles((theme) => ({
       opacity: 1,
       zIndex: theme.zIndex.snackbar,
     },
+    '75%': {
+      opacity: 1,
+      zIndex: theme.zIndex.snackbar,
+    },
     '100%': {
       opacity: 0,
       zIndex: -theme.zIndex.snackbar,
